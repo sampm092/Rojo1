@@ -10,9 +10,6 @@ local function Start()
 	Sand.CastShadow = false  -- Bool
 end
 
-
---TESTT--
-
 local function ChangePlate()
 	status = true
 	-- IF ELSE STRUCTURE
@@ -28,15 +25,19 @@ end
 local function Loop()
 	-- WHILE AND FOR LOOP
 	local j = 2
-	for i = 1,3,1 do --for (1 = 1 ; i <= 3; i + 1)  
+	for i = 1,10,1 do --for (1 = 1 ; i <= 3; i + 1)  
 		while j <= 8 do
 			print(i+j)	
-			Sand.BrickColor = BrickColor.new("Teal")
+			plate.BrickColor = BrickColor.new("Teal")
 			task.wait(1)
-			Sand.BrickColor = BrickColor.new("Artichoke")
+			plate.BrickColor = BrickColor.new("Artichoke")
 			task.wait(1)
 			j += 2
 		end
+		if i == 4 then
+			break
+		end
+
 	end
 	
 end
