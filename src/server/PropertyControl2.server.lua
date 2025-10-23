@@ -26,22 +26,35 @@ local function Loop()
 	-- WHILE AND FOR LOOP
 	local j = 2
 	for i = 1,10,1 do --for (1 = 1 ; i <= 3; i + 1)  
-		while j <= 8 do
+		while j <= (8 + i) do
 			print(i+j)	
 			plate.BrickColor = BrickColor.new("Teal")
 			task.wait(1)
 			plate.BrickColor = BrickColor.new("Artichoke")
 			task.wait(1)
 			j += 2
+			print("Loop end")
 		end
-		if i == 4 then
-			break
-		end
-
 	end
 	
 end
 
+local function tryLoop()
+	for i = 1,1000 do
+		if i == 10 then
+			print("i is printed")
+			continue
+		end
+
+		if i == 200 then
+			break
+		end
+		
+		print("This the last")
+	end
+end
+
 Start()
 ChangePlate()
-Loop()
+-- Loop()
+tryLoop()
