@@ -33,7 +33,8 @@ local function Loop()
 			plate.BrickColor = BrickColor.new("Artichoke")
 			task.wait(1)
 			j += 2
-			print("Loop end")
+			local randomNumber = math.random(1,6) -- a normal random function
+			print ("This is random - ", randomNumber)	
 		end
 	end
 	
@@ -56,5 +57,5 @@ end
 
 Start()
 ChangePlate()
--- Loop()
-tryLoop()
+Loop()
+-- tryLoop()
