@@ -7,5 +7,10 @@ game.Players.PlayerAdded:Connect(function(player)
 	coins.Name = "Coins"
 	coins.Value = 0
 	coins.Parent = leaderstats -- adding it to leaderstat folder
+
+    while true do
+        task.wait(2)
+        coins.Value += 1 -- adding coins overtime
+    end
 	
 end)
