@@ -10,7 +10,7 @@ game.Players.PlayerAdded:Connect(function(player)
 
     while true do
         task.wait(2)
-        coins.Value += 1 -- adding coins overtime
+        coins.Value = coins.value + 1 -- adding coins overtime
     end
 	
 end)
